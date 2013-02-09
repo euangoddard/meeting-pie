@@ -1,0 +1,115 @@
+body {
+    background: #222;
+    overflow: hidden;
+    color: #ccc;
+}
+
+#setup {
+    width: 768px;
+    margin: 1em auto;
+}
+#setup h1 {
+    font-size: 5em;
+}
+#setup input,
+#setup button {
+    font-size: 2em;
+}
+#setup input {
+    width: 3em;
+}
+
+#feedback {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-shadow: 2px 2px 2px #222;
+    font-size: 5em;
+}
+#timer {
+    margin: 0 auto;
+    display: none;
+}
+#times-up {
+    font-size: 5em;
+    text-align: center;
+    margin: 1em 0;
+    font-weight: bold;
+    display: none;
+    -webkit-animation: 10s colours infinite;
+    -moz-animation: 10s colours infinite;
+    -o-animation: 10s colours infinite;
+    animation: 10s colours infinite;
+}
+#times-up a {
+    text-decoration: none;
+    color: #ccc;
+}
+#times-up a:hover {
+    text-shadow: 0px 0px 5px #999;
+}
+
+@-webkit-keyframes colours {
+  0% { color: #ff0000 }
+  50% { color: #00ff00 }
+  100% { color: #ff0000 }
+}
+@-moz-keyframes colours {
+  0% { color: #ff0000 }
+  50% { color: #00ff00 }
+  100% { color: #ff0000 }
+}
+@-o-keyframes colours {
+  0% { color: #ff0000 }
+  50% { color: #00ff00 }
+  100% { color: #ff0000 }
+}
+@keyframes colours {
+  0% { color: #ff0000 }
+  50% { color: #00ff00 }
+  100% { color: #ff0000 }
+}
+
+.meeting-running #timer,
+.meeting-running #feedback {
+    display: block;
+}
+.meeting-running #setup,
+.meeting-ended #setup {
+    display: none;
+}
+.meeting-ended #times-up {
+    display: block;
+}
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+    body {
+      font-size: 13px;
+    }
+    #setup {
+      width: 100%;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    body {
+      font-size: 11px;
+    }
+    #setup {
+      width: 100%;
+    }
+    #setup input,
+    #setup button {
+        display: block;
+        font-size: 3em;
+        width: 90%;
+        margin: 0.2em auto;
+    }
+}
+
+@media screen and (max-aspect-ratio: 6/7) {
+    #timer {
+      margin-top: 5em;
+    }
+}

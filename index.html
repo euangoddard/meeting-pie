@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Meeting pie</title>
+    <meta http-equiv="cleartype" content="on">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/pie.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <section id="setup">
+      <h1>Meeting pie</h1>
+      <form action="." method="get" id="setup">
+        <input
+          type="number"
+          id="minutes"
+          placeholder="Minutes"
+          autofocus
+          required
+          step="1"
+          min="1"
+          value="60"
+        >
+        <button type="submit">Start meeting</button>
+      </form>
+    </section>
+    <section id="feedback"></section>
+    <section id="timer">
+      <canvas id="pie"></canvas>
+    </section>
+    
+    <section id="times-up">
+      Time's up!
+      <a href="#">↺</a>
+    </section>
+    
+    <script src="lib/ios-orientation-change.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="pie.js"></script>
+  </body>
+</html>
