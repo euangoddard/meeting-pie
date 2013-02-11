@@ -11,9 +11,9 @@
     // Timing variables
     
     var total_milliseconds = null;
-    var elapsed_milliseconds = 0;
+    var timestamp_start = null;
     
-    var INTERVAL_MILLISECONDS = 1000;
+    var INTERVAL_MILLISECONDS = 50;
     var interval_id = null;
     
     // Canvas-related variables
@@ -46,7 +46,7 @@
     
     var start_meeting = function () {
         $('body').addClass(MEETING_RUNNING_CLASS);
-        elapsed_milliseconds = 0;
+        timestamp_start = new Date();
         interval_id = setInterval(update_pie, INTERVAL_MILLISECONDS);
         update_remaining_time_text(total_milliseconds);
         draw_pie(1);
@@ -64,7 +64,7 @@
     };
     
     var update_pie = function () {
-        elapsed_milliseconds += INTERVAL_MILLISECONDS;
+        var elapsed_milliseconds = new Date() - timestamp_start;
         var remaining_milliseconds = total_milliseconds - elapsed_milliseconds;
         update_remaining_time_text(remaining_milliseconds);
         
@@ -93,7 +93,6 @@
     var draw_pie = function (proportion) {
         // Clear the contents of the canvas
         canvas_element.width = canvas_size;
-        
         
         var half_size = parseInt(canvas_size / 2, 10);
         var radius = parseInt(half_size * 0.95, 10);
