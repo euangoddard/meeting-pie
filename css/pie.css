@@ -2,30 +2,46 @@ body {
     background: #222;
     overflow: hidden;
     color: #ccc;
+    font-size: 16px;
 }
 
 #setup {
-    width: 768px;
+    width: 500px;
     margin: 1em auto;
+    text-align: center;
 }
 #setup h1 {
     font-size: 5em;
 }
 #setup input,
 #setup button {
-    font-size: 2em;
+    font-size: 3em;
 }
 #setup input {
-    width: 3em;
+    width: 90%;
+    clear: both;
+    margin-bottom: 1em;
 }
-
+#setup button {
+    padding-right: 1em;
+    padding-left: 1em;
+}
 #feedback {
+    color: #fff;
     display: none;
-    position: absolute;
-    top: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 4em;
     left: 0;
-    text-shadow: 2px 2px 2px #222;
-    font-size: 5em;
+    letter-spacing: 1px;
+    line-height: 1em;
+    position: absolute;
+    text-align: center;
+    text-shadow: -1px -1px 3px #000, 1px -1px 3px #000, -1px 1px 3px #000, 1px 1px 3px #000; 
+    top: 20px;
+    width: 100%;
+    padding: 20px 0;
+
+    background: rgba(34,34,34,0.5);
 }
 #timer {
     margin: 0 auto;
@@ -132,27 +148,28 @@ body {
 }
 
 @media screen and (min-width: 640px) and (max-width: 767px) {
-    body {
-      font-size: 13px;
-    }
     #setup {
       width: 100%;
+    }
+    #setup h1 {
+        font-size: 4em;
+    }
+    #setup button {
     }
 }
 
 @media screen and (max-width: 639px) {
-    body {
-      font-size: 11px;
-    }
     #setup {
       width: 100%;
+    }
+    #setup h1 {
+        font-size: 3em;
     }
     #setup input,
     #setup button {
         display: block;
-        font-size: 3em;
         width: 90%;
-        margin: 0.2em auto;
+        margin: 0.2em auto 1em;
     }
 }
 
