@@ -51,24 +51,72 @@ body {
 }
 
 @-webkit-keyframes colours {
-  0% { color: #ff0000 }
-  50% { color: #00ff00 }
-  100% { color: #ff0000 }
+  0% {
+    color: #0f0;
+  }
+  25% {
+    color: #ff0;
+  }
+  50% {
+    color: #f60;
+  }
+  75% {
+    color: #f00;
+  }
+  100% {
+    color: #ff0;
+  }
 }
 @-moz-keyframes colours {
-  0% { color: #ff0000 }
-  50% { color: #00ff00 }
-  100% { color: #ff0000 }
+  0% {
+    color: #0f0;
+  }
+  25% {
+    color: #ff0;
+  }
+  50% {
+    color: #f60;
+  }
+  75% {
+    color: #f00;
+  }
+  100% {
+    color: #ff0;
+  }
 }
 @-o-keyframes colours {
-  0% { color: #ff0000 }
-  50% { color: #00ff00 }
-  100% { color: #ff0000 }
+  0% {
+    color: #0f0;
+  }
+  25% {
+    color: #ff0;
+  }
+  50% {
+    color: #f60;
+  }
+  75% {
+    color: #f00;
+  }
+  100% {
+    color: #ff0;
+  }
 }
 @keyframes colours {
-  0% { color: #ff0000 }
-  50% { color: #00ff00 }
-  100% { color: #ff0000 }
+  0% {
+    color: #0f0;
+  }
+  25% {
+    color: #ff0;
+  }
+  50% {
+    color: #f60;
+  }
+  75% {
+    color: #f00;
+  }
+  100% {
+    color: #ff0;
+  }
 }
 
 .meeting-running #timer,
