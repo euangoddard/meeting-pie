@@ -138,9 +138,22 @@
         alert(message);
     };
     
-    var get_colour = function (proportion) {
-        var green = 255 * proportion;
-        var red = 255 - green;
+    var get_colour = function (proportion_complete) {
+        var proportion_elapsed = 1 - proportion_complete;
+        var red;
+        var green;
+        
+        if (proportion_elapsed < 1/3) {
+            red = 765 * proportion_elapsed;
+            green = 255;
+        } else if (proportion_elapsed < 2/3) {
+            red = 255;
+            green = 51 * (8 - 9 * proportion_elapsed);
+        } else {
+            red = 255;
+            green = 306 * proportion_complete;
+        }
+        
         return 'rgb(' + parseInt(red, 10) + ', ' + parseInt(green, 10) + ', 0)';
     };
     
